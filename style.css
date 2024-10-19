@@ -1,0 +1,240 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.gap-container{
+    margin-top: 2rem;
+}
+
+/* nav bar */
+.navbar-pos{
+    margin-top: 90px;
+}
+
+.para-offer{
+    background-color: black;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+.carousel {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+/* Courasal */
+.img1,.img2,.img3{
+    height: 850px;
+    
+}
+
+
+/* small card section */
+.card-img-top{
+    height: 300px;
+}
+
+.custom-card {
+    border: none; 
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; 
+  }
+
+  .custom-card:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); 
+  }
+
+  .custom-card p {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+
+
+/* About US section */
+
+.section{
+    width: 100%;
+    min-height:100vh;
+    background-color: #ddd; 
+    margin-bottom: 0px;
+}
+.container{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;  
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.content-section{
+    float: left;
+    width: 55%;
+}
+.image-section{
+    float: right;
+    width: 40%;
+}
+.image-section img{
+    width: 100%;
+    height: auto;
+} 
+ .content-section .title{
+    text-transform: uppercase;
+    font-size: 28px;
+
+}
+.content-section .content h3{
+    margin-top: 20px;
+    color: #5d5d5d;
+    font-size: 21px;
+}
+.content-section .content p{
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.content-section .content .button {
+    margin-top: 30px;
+}
+
+.content-section .content .button a{
+   background-color: #3d3d3d;
+   padding: 12px 40px;
+   border-radius: 20px;
+   text-decoration: none;
+   color: #fff;
+   font-size: 25px;
+   letter-spacing: 1.5px;
+
+} 
+.content-section .content .button a:hover{
+    background-color: #a52a2a;
+    color: #fff;
+}
+.content-section .social{
+    margin-top: 40px;
+
+}
+.content-section .social i{
+    color:black;
+    font-size: 30px;
+    padding: 0px 10px;  
+}
+.content-section .social i hover{
+    color: #3d3d3d;
+
+}
+
+
+
+/* Footer */
+
+
+
+.logo-display {
+    display: flex;
+    width: 100%;
+    justify-content: center; 
+    margin-top: 1rem;
+    gap: 60px; 
+}
+
+
+.bi-facebook{
+    color: rgb(58,117,184);
+    font-size: larger;
+
+}
+.bi-instagram{
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background-clip:text ;
+    color: transparent;
+    font-size: larger;  
+}
+
+.bi-twitter-x{
+    color: black;
+    font-size: larger;
+}
+
+.para{
+    text-align: justify;
+    width: 90%;
+}
+
+.footer-link p:hover {
+    font-weight: 500;
+}
+
+
+.alpha{
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+
+.alpha:hover {
+    font-weight: 500;
+}
+
+
+/* Off-canvas */
+
+
+.arrow1{
+    margin-left: 60px;
+}
+
+.arrow2{
+    margin-left: 50px;
+}
+
+.arrow3{
+    margin-left: 55px;
+}
+
+.arrow4{
+    margin-left: 65px;
+}
+
+
+
+/* contactus */
+.contactus{
+    margin-top: 150px;
+}
+
+.card {
+    position: relative;
+}
+
+
+.heart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.heart-icon:hover {
+    color: red;
+}
+
+.stars {
+    color: gold;
+}
+
+.select{
+    border: none;
+}
+
