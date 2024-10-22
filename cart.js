@@ -37,19 +37,84 @@ function LoadCart(){
               <p class="text-center price">${ele.price}</p>
               <!-- quantity --> 
                <div class="quantity-container">
-                <button class="btn btn-danger">-</button>
-                <span>${ele.quantity}</span>
-                <button class="btn btn-success">+</button>
-                <button>💀</button>
+                <button class="btn btn-danger decrement-btn">-</button>
+                <span class="quant-val">${ele.quantity}</span>
+                <button class="btn btn-success increment-btn">+</button>
+                <button class="btn btn-danger delete-btn">💀</button>
                </div>
              
            
             </div>
           </div>`
+ 
 
+         //  accessing all the Elements 
+         let incremenetBtn=cartCard.querySelector(".increment-btn")
+         let decremenetBtn=cartCard.querySelector(".decrement-btn")
+         let quant=cartCard.querySelector(".quant-val")
+         let DeleteBtn=cartCard.querySelector(".delete-btn")
+
+         // adding the Functionalities for  increement decrement and delete
+         incremenetBtn.addEventListener("click",()=>{
+            //  function to handleincrement logic
+            handleIncrement(ele,quant)
+
+         })
+         decremenetBtn.addEventListener("click",()=>{
+            //  function to handledelete logic
+           handleDecrement(ele,quant)
+
+         })
+         DeleteBtn.addEventListener("click",()=>{
+            //  function to handledelete logic
+            handleDelete(ele,quant)
+
+         })
+
+
+   //  appending the chid to parent  
     cartContainer.appendChild(cartCard)
 
     })
-
+    CartTotal()
  }
 
+
+ function handleIncrement(ele,quant){
+     ele.quantity++
+     quant.innerText=ele.quantity;
+
+   //   updating the Local storage 
+   localStorage.setItem("cartItem",JSON.stringify(cartItems));
+
+   //   updating the ui
+   updateCartUi()
+   CartTotal()
+ }
+ function handleDecrement(ele,quant){
+
+   if(ele.quantity>1){
+      ele.quantity--
+      quant.innerText=ele.quantity;
+ 
+    //   updating the Local storage 
+    localStorage.setItem("cartItem",JSON.stringify(cartItems));
+ 
+   }
+   updateCartUi()
+   CartTotal()
+ }
+//  function to delete items
+ function handleDelete(ele){
+   cartItems=cartItems.filter((item)=>item.name !==ele.name)
+   localStorage.setItem("cartItem",JSON.stringify(cartItems));
+   updateCartUi()
+   CartTotal()
+ }
+
+ function CartTotal(){
+   let total=document.querySelector(".cart-total")
+   let cartTotal=cartItems.reduce((total,ele)=>total+ele.quantity*ele.price,0)
+   total.innerText=`cartTotal: ${cartTotal}`
+ 
+ }
